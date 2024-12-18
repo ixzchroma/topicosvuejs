@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Geometria</h1>
+    <img src="https://static.todamateria.com.br/upload/ge/om/geometria-espacial-og.jpg" alt="" width="600" height="400">
+    <p>A geometria é um dos ramos mais antigos e fundamentais da matemática, responsável pelo estudo das formas, tamanhos, posições e propriedades do espaço. <br> Seu nome tem origem no grego, onde geo significa "terra" e metria significa "medida", o que reflete suas origens práticas na medição de terrenos e construções.</p>
+
+    <p>Importância da geometria:</p>
+
+    <div id="app-4">
+       <ol>
+           <li v-for="g in todos">
+               {{ g.text }}
+           </li>
+       </ol>
+   </div>
+   
+   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+   
+   <script>
+       var app4 = new Vue({
+           el: "#app-4",
+           data: {
+               todos: [
+               {text: "Arquitetura e Engenharia"},
+               {text: "Arte e Design"},
+               {text: "Tecnologia e Ciência"},
+               {text: "Astronomia"},
+               ]
+           }
+       })
+   </script>
+
+   <p>A geometria é uma ciência fascinante e essencial, que nos ajuda a entender o mundo ao nosso redor. <br> Seja na construção de prédios, no desenho de uma obra de arte ou na exploração do universo, a geometria fornece as ferramentas para medir, analisar e transformar espaços. <br> Sua beleza e lógica continuam a inspirar gerações de cientistas, artistas e pensadores.</p>
+</body>
+</html>

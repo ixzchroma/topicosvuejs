@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Matemática</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>História da matemática</h1>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRab3aaMfXJ6e_uytEp0Wu6Qn3-JzD8liN8Kg&s" alt="" width="600" height="400">
+<p>Faça um texto sobre a historia da matematica
+    A história da matemática é uma jornada fascinante que se estende por milênios, <br>
+     desde as primeiras contagens e medições até as complexas teorias modernas. <br>
+     Vamos explorar alguns dos principais marcos dessa história rica e multifacetada <br>
+     <p>Períodos:</p>
+
+     <div id="app-4">
+        <ol>
+            <li v-for="g in todos">
+                {{ g.text }}
+            </li>
+        </ol>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
+    <script>
+        var app4 = new Vue({
+            el: "#app-4",
+            data: {
+                todos: [
+                {text: "Mesopotâmia e Egito"},
+                {text: "Grécia Antiga"},
+                {text: "Índia e Mundo Islâmico"},
+                {text: "Renascimento"},
+                {text: "Era Contemporânea"}
+                ]
+            }
+        })
+    </script>
+           <img src="https://www.matific.com/home/resources/media/filer_public_thumbnails/filer_public/ba512d0abacd725b5b1f3955e542f3a6/matificbrasilapoioeducacionalltda_matific_image_167.jpeg__800x330_q85_crop_subsampling-2_upscale.jpg" alt="" width="600" height="400"> <br>
+
+           <p>A história da matemática é um testemunho do engenho humano e da busca pelo conhecimento. <br>
+             Desde as necessidades práticas das antigas civilizações até as abstrações teóricas dos tempos modernos, <br>
+              a matemática evoluiu para se tornar uma linguagem universal da ciência e da tecnologia. <br>
+             É uma história de descoberta contínua e inovação, que continua a moldar o mundo em que vivemos.</p>
+    </body>
+    </html>
+
+</body>
+</html>

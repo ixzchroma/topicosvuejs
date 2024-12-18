@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Matemática Aplicada</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqws-BGbJBJ6x33Gg_fCyupmsDQxNLrYSJJA&s" alt="" width="200" height="100">
+    <p>A matemática aplicada é um campo do conhecimento que utiliza teorias e métodos matemáticos para resolver problemas concretos do mundo real.<br> Diferente da matemática pura, focada em conceitos abstratos, a matemática aplicada atua como uma ponte entre a teoria e a prática, transformando equações, números e fórmulas em soluções eficientes para diversas áreas da ciência, tecnologia, economia e indústria.</p>
+
+    <p>Principais Áreas de atuação:</p>
+
+    <div id="app-4">
+       <ol>
+           <li v-for="g in todos">
+               {{ g.text }}
+           </li>
+       </ol>
+   </div>
+   
+   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+   
+   <script>
+       var app4 = new Vue({
+           el: "#app-4",
+           data: {
+               todos: [
+               {text: "Engenharia"},
+               {text: "Economia e Finanças"},
+               {text: "Medicina e Biologia"},
+               {text: "Informática"},
+               {text: "Indústria e Logística"}
+               ]
+           }
+       })
+   </script>
+
+<h2>Importância na Atualidade</h2>
+
+<p>Vivemos em uma era onde a quantidade de dados disponíveis cresce exponencialmente. A matemática aplicada torna-se, portanto, uma ferramenta poderosa para lidar com o “Big Data”, otimizando processos e gerando inovações. <br> Problemas globais, como mudanças climáticas e pandemias, também dependem fortemente de soluções matemáticas, seja por meio de previsões ou desenvolvimento de estratégias de mitigação.</p>
+
+
+
+
+
+</body>
+</html>

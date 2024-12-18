@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cálculo</h1>
+    <img src="https://img.freepik.com/vetores-premium/formula-matematica-calculo-matematico-no-quadro-negro-da-escola-algebra-e-geometria-ciencia-giz-padrao-conceito-educacao-vetorial-analise-cientifica-calculo-de-numeros-conhecimento-complexo_102902-3216.jpg" alt="" width="600" height="400">
+
+    <p>O Cálculo é um ramo avançado da matemática que estuda as taxas de variação, o movimento, e as mudanças. <br> Criado no século XVII, suas origens estão ligadas aos trabalhos dos matemáticos Isaac Newton e Gottfried Wilhelm Leibniz, que o desenvolveram independentemente. <br> O cálculo se tornou uma ferramenta fundamental para a ciência, a engenharia, a economia e outras áreas, possibilitando avanços significativos na compreensão e modelagem do mundo.</p>
+
+    <p>Importância do Cálculo:</p>
+
+    <div id="app-4">
+       <ol>
+           <li v-for="g in todos">
+               {{ g.text }}
+           </li>
+       </ol>
+   </div>
+   
+   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+   
+   <script>
+       var app4 = new Vue({
+           el: "#app-4",
+           data: {
+               todos: [
+               {text: "Física"},
+               {text: "Engenharia"},
+               {text: "Economia"},
+               {text: "Medicina e Biologia"},
+               {text: "Informática"}
+               ]
+           }
+       })
+   </script>
+
+   <p>O cálculo revolucionou a matemática e as ciências, oferecendo ferramentas para entender fenômenos dinâmicos e resolver problemas complexos. <br> Seja no movimento dos planetas, no crescimento econômico ou no desenvolvimento de tecnologias modernas, o cálculo está presente, permitindo que o ser humano interprete, modele e transforme o mundo ao seu redor.</p>
+</body>
+</html>

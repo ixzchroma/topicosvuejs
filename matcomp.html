@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Matemática</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Matemática Computacional</h1>
+<img src="https://dcc.ufmg.br/wp-content/uploads/elementor/thumbs/venn-BMC-semLegenda-qicuwqjh749yu63zsd6reyo3i3e0ty8ogafo2doya0.png" alt="" width="600" height="400">
+<p>A matemática computacional é um campo multidisciplinar que envolve o uso de métodos matemáticos para resolver problemas complexos utilizando computadores. <br>
+     Este campo combina princípios de matemática, ciência da computação e engenharia para desenvolver algoritmos e modelos que podem ser implementados em sistemas de computador <br>
+     para analisar e resolver problemas que seriam difíceis ou impossíveis de resolver manualmente. <br>
+     <p>Principais Áreas de aplicação:</p>
+
+     <div id="app-4">
+        <ol>
+            <li v-for="g in todos">
+                {{ g.text }}
+            </li>
+        </ol>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
+    <script>
+        var app4 = new Vue({
+            el: "#app-4",
+            data: {
+                todos: [
+                {text: "Algoritmos Numéricos"},
+                {text: "Simulação e Modelagem"},
+                {text: "Análise de Dados e Machine Learning"},
+                {text: "Criptografia e Segurança da Informação"},
+                {text: "Otimização"}
+                ]
+            }
+        })
+    </script>
+    <p>O campo da matemática computacional está em constante evolução, <br>
+         com novos avanços em hardware e software possibilitando a resolução de problemas cada vez mais complexos. <br>
+          No entanto, há desafios significativos, incluindo a necessidade de maior precisão e eficiência nos algoritmos <br>
+           e a gestão de grandes volumes de dados.</p>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0dAjpsPWg7U0Xx_526I4Xj0lg2SpdNyCI5w&s" alt="" width="600" height="400"> <br>
+
+           <p>A matemática computacional é fundamental para a ciência moderna e a tecnologia. <br>
+             Ela permite a modelagem, análise e solução de problemas complexos em uma variedade de campos, <br>
+             desde ciências físicas e biológicas até ciências sociais e engenharia. <br>
+              À medida que a tecnologia avança, a matemática computacional continuará a desempenhar um papel crucial <br>
+               na inovação e no desenvolvimento de novas soluções para os desafios do mundo real.</p>
+    </body>
+    </html>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Dinâmico com Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        .footer-form {
+            background-color: #f8f8f8;
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Conteúdo da Página</h1>
+        <p>O conteúdo principal da página vai aqui.</p>
+    </main>
+    <div id="app">
+        <footer-form></footer-form>
+    </div>
+
+    <script>
+        Vue.component('footer-form', {
+            template: `
+                <div class="footer-form">
+                    <h1>Formulário de Endereço</h1>
+                    <form @submit.prevent="submitForm">
+                        <div v-for="(address, index) in addresses" :key="index">
+                            <h3>Endereço {{ index + 1 }}</h3>
+                            <label :for="'street-' + index">Rua:</label>
+                            <input :id="'street-' + index" v-model="address.street" required>
+
+                            <label :for="'city-' + index">Cidade:</label>
+                            <input :id="'city-' + index" v-model="address.city" required>
+
+                            <label :for="'state-' + index">Estado:</label>
+                            <input :id="'state-' + index" v-model="address.state" required>
+                        </div>
+
+                        <button type="button" @click="addAddress">Adicionar Endereço</button>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            `,
+            data() {
+                return {
+                    addresses: [
+                        { street: '', city: '', state: '' }
+                    ]
+                };
+            },
+            methods: {
+                addAddress() {
+                    this.addresses.push({ street: '', city: '', state: '' });
+                },
+                submitForm() {
+                    if (this.addresses.every(address => address.street && address.city && address.state)) {
+                        alert("Formulário enviado com sucesso!");
+                        // Aqui você pode adicionar código para enviar os dados para um servidor
+                        // ou processar os dados conforme necessário.
+                    } else {
+                        alert("Por favor, preencha todos os campos.");
+                    }
+                }
+            }
+        });
+
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+</html>

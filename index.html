@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exemplo vue_js</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="matcomp.html">Matemática Computacional</a>
+        <a href="matrec.html">Matemágica Recreativa</a>
+        <a href="histmat.html">História da Matemática</a>
+        <a href="matapl.html">Matemática Aplicada</a>
+    </nav>
+
+    <center><h1>Bem vindos a Matemática!</h1>
+<img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/164EE/production/_109347319_gettyimages-611195980.jpg.webp" alt="" width="600" height="400">
+<h2>A matemática é uma disciplina fascinante e fundamental para diversas áreas do conhecimento e do cotidiano. <br>
+     Ela se dedica ao estudo de padrões, quantidades, estruturas e mudanças. Aqui estão alguns pontos interessantes sobre a matemática: <br>
+    Principais Ramos da Matemática: <br> </h2> 
+
+<div id="app">
+<p v-if="status"> <a href="matcomp.html">Matemática Computacional</a>{{titulo}} </p>
+<img src="https://dcc.ufmg.br/wp-content/uploads/elementor/thumbs/venn-BMC-semLegenda-qicuwqjh749yu63zsd6reyo3i3e0ty8ogafo2doya0.png" alt="" width="600" height="400"> <br>
+
+<h1 v-else> Não há texto </h1>
+
+<p v-show="status"><a href="matrec.html">Matemágica Recreativa</a>{{titulo2}} </p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRab3aaMfXJ6e_uytEp0Wu6Qn3-JzD8liN8Kg&s" alt="" width="600" height="400"> <br>
+
+<p v-show="status"><a href="matgeo.html">Geometria</a> {{titulo3}} </p>
+<img src="https://static.todamateria.com.br/upload/ge/om/geometria-espacial-og.jpg" alt="" width="600" height="400"> <br>
+
+<p v-show="status"><a href="matapl.html">Matemática Aplicada</a> {{titulo4}} </p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqws-BGbJBJ6x33Gg_fCyupmsDQxNLrYSJJA&s" alt="" width="600" height="800"> <br>
+
+<p v-show="status"><a href="matcalc.html">Cálculo</a> {{titulo5}} </p>
+<img src="https://img.freepik.com/vetores-premium/formula-matematica-calculo-matematico-no-quadro-negro-da-escola-algebra-e-geometria-ciencia-giz-padrao-conceito-educacao-vetorial-analise-cientifica-calculo-de-numeros-conhecimento-complexo_102902-3216.jpg" alt="" width="600" height="400"> <br>
+
+<p v-show="status"><a href="histmat.html">História da matemática</a> {{titulo6}} </p>
+<img src="https://s2.static.brasilescola.uol.com.br/be/2023/09/formula-para-calculo-de-probabilidade-a-direita-na-imagem-a-esquerda-dois-dados-sendo-lancados.jpg" alt="" width="600" height="400"> <br>
+
+<p v-show="status"><a href="matdiffie.html">Diffie-Hellman</a> {{titulo7}} </p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDQSD6CfQOa6Zx0BlATDhCAS-88wml69G0lA&s" alt="" width="600" height="400"> <br>
+</center>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data:{
+            status: true,
+            titulo: " : Algoritmos e complexidade computacional.Inteligência artificial e aprendizado de máquina.",
+            titulo2: " : Quebra-cabeças matemáticos e enigmas.Jogos matemáticos e estratégias. ",
+            titulo3: " : Estuda as formas, tamanhos e propriedades dos espaços e figuras. Inclui desde a geometria plana (2D) até a geometria espacial (3D). ",
+            titulo4: "  : Modelagem matemática em biologia, economia ou engenharia. Criptografia e segurança da informação. ",
+            titulo5: " : Aborda conceitos de derivadas e integrais, essenciais para compreender mudanças contínuas e áreas sob curvas. ",
+            titulo6: ": A história da matemática é uma jornada fascinante que se estende por milênios, desde as primeiras contagens e medições até as complexas teorias modernas. Vamos explorar alguns dos principais marcos dessa história rica e multifacetada:",
+            titulo7: ": O Diffie-Hellman é um método criptográfico. Ele permite que duas partes estabeleçam uma chave secreta compartilhada mesmo se comunicarem por um canal inseguro. ",
+        }
+    })
+</script>
+
+<div id="app" class="newsletter-box">
+    <h2>Assine nossa Newsletter</h2>
+    <input type="email" v-model="email" placeholder="Digite seu e-mail" required>
+    <button @click="subscribe">Assinar</button>
+
+    <div class="subscribers-list" v-if="subscribers.length > 0">
+        <h3>Assinantes:</h3>
+        <ul>
+            <li v-for="(subscriber, index) in subscribers" :key="index">{{ subscriber }}</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            email: '',
+            subscribers: []
+        },
+        methods: {
+            subscribe() {
+                if (this.email) {
+                    this.subscribers.push(this.email);
+                    this.email = ''; // Limpa o campo de entrada
+                } else {
+                    alert('Por favor, insira um e-mail válido.');
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

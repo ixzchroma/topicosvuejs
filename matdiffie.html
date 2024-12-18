@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Diffie-Hellman</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDQSD6CfQOa6Zx0BlATDhCAS-88wml69G0lA&s" alt="" width="600" height="400">
+    <p>O algoritmo Diffie-Hellman é um dos principais marcos da criptografia moderna, permitindo que duas partes compartilhem uma chave secreta de forma segura em um canal público. <br> Criado em 1976 por Whitfield Diffie e Martin Hellman, esse protocolo revolucionou a forma como a criptografia é usada na comunicação digital, sendo a base para diversos sistemas de segurança atuais.</p>
+
+    <p>Aplicações do Diffie-Hellman:</p>
+
+    <div id="app-4">
+       <ol>
+           <li v-for="g in todos">
+               {{ g.text }}
+           </li>
+       </ol>
+   </div>
+   
+   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+   
+   <script>
+       var app4 = new Vue({
+           el: "#app-4",
+           data: {
+               todos: [
+               {text: "SSL/TLS"},
+               {text: "VPNs"},
+               {text: "Comunicação Segura"},
+               {text: "Blockchain e Criptomoedas"},
+               ]
+           }
+       })
+   </script>
+</body>
+</html>
